@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+
+body.rtl {
+  direction: rtl;
+}
+
+body.rtl .btn-delete {
+  float: left;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  padding: 0 40px;
+  background-image: url('https://www.oecd-nea.org/upload/docs/image/jpeg/2020-11/book_stack.jpg');
+}
+
+select {
+  margin-left: 40%;
+  font-size: 15px;
+  font-style: italic;
+  padding: 5px;
+  /* border-radius: 50%; */
+  border: 3px;
+  background-color: rgb(145, 183, 216);
+  cursor: pointer;
+}
+
+.sort-by {
+  background-color: #f0b690;
+  height: 3vh;
+}
+
+.books {
+  margin-top: 20px;
+  padding: 5px;
+  height: 30vh;
+  text-align: center;
+  flex-direction: column;
+
+  /* display: flex; */
+}
+
+.bookstable,
+th,
+td {
+  /* height: 15px; */
+  /* width: 15px; */
+  border: 3px solid rgb(46, 25, 25);
+  border-collapse: collapse;
+}
+th,
+td {
+  background: radial-gradient(
+    circle,
+    rgba(198, 134, 6, 1.3874709976798144) 54%,
+    rgba(193, 170, 31, 1.6890951276102089) 84%
+  );
+}
+th {
+  background-color: rgb(242, 227, 178);
+  font-size: 17px;
+}
+button {
+  font-size: 17px;
+  font-weight: bold;
+}
+.books .read {
+  background-color: rgb(95, 95, 249);
+}
+.books .update {
+  background-color: rgb(222, 249, 170);
+}
+.books .delete {
+  background-color: rgb(244, 141, 141);
+}
+
+.modal {
+  /* background: rgb(230, 159, 21); */
+  background: radial-gradient(
+    circle,
+    rgba(230, 159, 21, 1) 10%,
+    rgba(31, 178, 193, 1) 80%
+  );
+  padding: 10px;
+  position: absolute;
+  top: 0px;
+  left: 150%;
+  height: 50%;
+  width: 25%;
+  text-align: center;
+}
+.modal.open {
+  left: 70%;
+  transition: left 0.5s;
+}
+.modal h3 {
+  color: rgb(60, 6, 15);
+  text-decoration: overline;
+  text-transform: capitalize;
+  font-size: medium;
+}
+.modal h4 {
+  color: rgb(117, 5, 23);
+}
+.modal > p {
+  text-align: left;
+  color: rgb(3, 2, 0);
+}
+.sort {
+  height: 10px;
+  text-align: left;
+  padding: 15px;
+  font-style: italic;
+  font-size: larger;
+}
+
+.Add-btn {
+  margin-left: 20%;
+  background: radial-gradient(
+    circle,
+    rgb(177, 244, 153) 15%,
+    rgba(177, 151, 238, 0.689) 84%
+  );
+  padding: 5px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+select:hover {
+  background-color: rgb(250, 242, 177);
+  cursor: grab;
+}
+
+.container {
+  display: flex;
+  /* width: 45%; */
+  /* text-align: center; */
+  margin: auto;
+  /* width: 30%; */
+  padding: 30px;
+  background: rgb(92, 124, 82);
+  background: radial-gradient(
+    circle,
+    rgba(92, 124, 82, 1) 0%,
+    rgba(116, 201, 213, 0.24593967517401394) 38%
+  );
+}
+
+h1 {
+  color: #fbe709;
+  text-shadow: 1px 1px 1px rgb(253, 0, 0), 2px 2px 1px rgb(238, 10, 10);
+}
+
+h2 {
+  color: bisque;
+}
+
+.book-filter {
+  background: linear-gradient(
+    315deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(20, 39, 148, 1) 15%,
+    rgba(48, 152, 96, 0.5150812064965198) 56%,
+    rgba(153, 235, 149, 0.051044083526682105) 100%
+  );
+  color: beige;
+  font-size: 20px;
+  margin: auto;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.book-rate {
+  width: 23%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.book-rate td {
+  width: 50px;
+  height: 10px;
+}
+
+.user-msg {
+  position: fixed;
+  bottom: -100px;
+  right: 10px;
+  background-color: rgb(246, 246, 246);
+  padding: 10px;
+}
+.user-msg.open {
+  bottom: 10px;
+  transition: bottom 0.5s;
+}
+
+.books .container {
+  bottom: -100px;
+}

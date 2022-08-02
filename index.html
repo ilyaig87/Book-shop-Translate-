@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Books Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <link rel="stylesheet" href="lib/bootstrap.css" /> -->
+  </head>
+
+  <body onload="onInit()">
+    
+    
+    <div class="container">
+      <header class='header btn'>
+        <select  onchange="onSetLang(this.value)">
+       <option value="en">English</option>
+       <option value="he">עברית</option>
+   </select>
+   
+      <h1 data-trans="title">Welcome to my bookshop</h1>
+      <section class="book-filter">
+        <h2></h2>
+        <label class="rate-filter-label">
+          <span data-trans="rate-filter"> </span>
+          <input
+            type="range"
+            min="0"
+            max="10"
+            value="0"
+            class="filter-rating-range"
+            onchange="this.title=this.value;onSetFilterBy({minRate:this.value})"
+          />
+        </label>
+        <label class="price-filter-label">
+          <span data-trans="price-filter"> </span>
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value="0"
+            class="filter-price-range"
+            onchange="this.title=this.value;onSetFilterBy({minPrice:this.value})"
+          />
+        </label>
+        <hr />
+        <div class="sort">
+          <span data-trans="sortby">Sort by:</span>
+          <select class="sort-by" onchange="onSetSortBy()">
+            <option value="" data-trans="sort-select"></option>
+            <option value="price" data-trans="price"></option>
+            <option value="maxRate" data-trans="rate"></option>
+          </select>
+        </div>
+      </section>
+      <div class="books">
+        <button
+          class="Add-btn"
+          onclick="onAddBook()"
+          data-trans="new-book"
+        >
+          Create new book
+        </button>
+        <table>
+          <tbody class="booksTable"></tbody>
+        </table>
+      </div>
+
+      <section class="books-container">
+        <button class="prev-btn" disabled onclick="onPrevPage()">
+          &#8656;
+          <!-- <button class="page-nums"><span></span></button> -->
+          <button class="next-btn" onclick="onNextPage()">&#8658;</button>
+        </button>
+        <button class="first-btn" disabled onclick="onFirstPage()">
+          &#8634;
+        </button>
+      </section>
+    </div>
+    <div class="modal">
+      <h3></h3>
+      <h4></h4>
+      <h5 data-trans="book-desc">Book Description</h5>
+      <p></p>
+      <section class="book-rate">
+        <h6 data-trans="book-rate">Book rate</h6>
+        <table>
+          <tr>
+            <td>
+              <button title="book-rate-down" onclick="onBookRateDown()">
+                -
+              </button>
+              <h7><span></span></h7>
+              <button title="book-rate-up" onclick="onBookRateUp()">+</button>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <button onclick="onCloseModal()" data-trans="close">Close</button>
+    </div>
+    <div class="user-msg"></div>
+
+    <!-- <script src="lib/jquery.js"></script> -->
+    <script src="js/services/util.service.js"></script>
+    <script src="js/services/storage.service.js"></script>
+    <script src="js/services/book.service.js"></script>
+    <script src="js/services/i18n-service.js"></script>
+    <script src="js/book.controller.js"></script>
+  </body>
+</html>

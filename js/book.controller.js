@@ -14,9 +14,10 @@ function renderBooks() {
       <tr>
       <td> ${book.id}</td>
         <td>${book.title}</td>
-        <td>$${book.price.toFixed(2)}</td>
+        <td>${formatCurrency(book.price)}</td>
         <td>${book.rate}</td>
-             <td >
+             <td>
+         
         <button data-trans="read" class="read" onclick="onReadBook('${
           book.id
         }')">Read</button>

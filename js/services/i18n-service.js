@@ -136,8 +136,15 @@ function setLang(lang) {
 }
 
 function formatCurrency(num) {
-  return new Intl.NumberFormat('he-IL', {
-    style: 'currency',
-    currency: 'ILS',
-  }).format(num)
+  if (gCurrLang === 'en') {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'USD',
+    }).format(num)
+  } else {
+    return new Intl.NumberFormat('he-IL', {
+      style: 'currency',
+      currency: 'ILS',
+    }).format(num * 3.52)
+  }
 }

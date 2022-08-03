@@ -44,7 +44,6 @@ function renderBooks() {
 
   //   console.log('strHTMLs:', strHTMLs)
   document.querySelector('.booksTable').innerHTML = strHTMLs
-  doTranslate()
 }
 
 function onAddBook() {

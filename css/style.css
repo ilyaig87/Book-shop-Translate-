@@ -90,11 +90,12 @@ button {
   position: absolute;
   top: 0px;
   left: 150%;
-  height: 50%;
-  width: 25%;
+  height: 100vh;
+  width: 45vh;
   text-align: center;
 }
 .modal.open {
+  height: 50vh;
   left: 70%;
   transition: left 0.5s;
 }

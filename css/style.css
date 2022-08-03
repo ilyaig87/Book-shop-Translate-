@@ -28,11 +28,12 @@ select {
   background-color: rgb(145, 183, 216);
   cursor: pointer;
 }
-
+/* 
 .sort-by {
   background-color: #f0b690;
   height: 3vh;
-}
+
+} */
 
 .books {
   margin-top: 20px;
@@ -111,11 +112,11 @@ button {
   color: rgb(3, 2, 0);
 }
 .sort {
-  height: 10px;
   text-align: left;
   padding: 15px;
   font-style: italic;
   font-size: larger;
+  margin-left: 50px;
 }
 
 .Add-btn {

@@ -90,7 +90,7 @@ function onReadBook(bookId) {
   const elModal = document.querySelector('.modal')
   gCurrBook = book
   elModal.querySelector('h3').innerText = book.title
-  elModal.querySelector('h4').innerText = book.price + '$'
+  elModal.querySelector('h4').innerText = formatCurrency(book.price)
   elModal.querySelector('p').innerText = book.desc
   elModal.querySelector('h7 span').innerText = gCurrBook.rate
 
